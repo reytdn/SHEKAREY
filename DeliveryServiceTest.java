@@ -5,10 +5,10 @@ public class DeliveryServiceTest{
 
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Enter Package Type (L/B): ");
+        System.out.print("Enter Package Type L or B: ");
         String packageType = input.nextLine();
 
-        System.out.print("Enter Service Type (NDP/NDS/DTWO): ");
+        System.out.print("Enter Service Type NDP or NDS or DTWO: ");
         String serviceType = input.nextLine();
 
         System.out.print("Enter Package Weight: ");
