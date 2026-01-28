@@ -1,29 +1,22 @@
+import java.util.Scanner;
+
 public class DeliveryServiceTest{
     public static void main(String[] args){
 
-        DeliveryService Service1 = new DeliveryService("L", "NDP", 7);
-        Service1.displayPackageDetails();
+        Scanner input = new Scanner(System.in);
 
-        DeliveryService Service2 = new DeliveryService("L", "NDS", 5);
-        Service2.displayPackageDetails();
+        System.out.print("Enter Package Type (L/B): ");
+        String packageType = input.nextLine();
 
-        DeliveryService Service3 = new DeliveryService("B", "NDP", 1);
-        Service3.displayPackageDetails();
+        System.out.print("Enter Service Type (NDP/NDS/DTWO): ");
+        String serviceType = input.nextLine();
 
-        DeliveryService Service4 = new DeliveryService("B", "NDS", 1);
-        Service4.displayPackageDetails();
+        System.out.print("Enter Package Weight: ");
+        double packageWeight = input.nextDouble();
 
-        DeliveryService Service5 = new DeliveryService("B", "DTWO", 1);
-        Service5.displayPackageDetails();
+        DeliveryService Service = new DeliveryService(packageType, serviceType, packageWeight);
+        Service.displayPackageDetails();
 
-        DeliveryService Service6 = new DeliveryService("B", "NDP", 5);
-        Service6.displayPackageDetails();
-
-        DeliveryService Service7 = new DeliveryService("B", "NDS", 5);
-        Service7.displayPackageDetails();
-
-        DeliveryService Service8 = new DeliveryService("B", "DTWO", 5);
-        Service8.displayPackageDetails();
-
+        input.close();
     }
 }
